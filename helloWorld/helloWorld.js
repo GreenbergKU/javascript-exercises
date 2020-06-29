@@ -1,5 +1,19 @@
 const helloWorld = function() {
-  return ''
+  return 'Hello, World!';
 }
 
 module.exports = helloWorld
+
+/*
+helloWorld
+repeatString
+reverseString
+removeFromArray
+sumAll
+leapYears
+tempConversion
+
+run:
+jasmine filename.spec.js
+
+*/
