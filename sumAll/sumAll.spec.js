@@ -25,4 +25,5 @@ describe('sumAll', function() {
   it('returns ERROR with non-number parameters', function() {
     expect(sumAll(10, [90, 1])).toEqual('ERROR');
   });
+  
 });

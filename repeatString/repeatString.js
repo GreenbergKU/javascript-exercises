@@ -1,24 +1,21 @@
-var repeatString = function(repeatWord, repeatNumber) {
-  var repetitousString;
-  repetitousString = repeatNumber < 0 ? 'ERROR' : "";
-    console.log('repetitousString: ', repetitousString);
-  for (var i = repeatNumber; i > 0; i--) {
+const repeatString = function(repeatWord, repeatNumber) {
+  let repetitousString = repeatNumber < 0 ? 'ERROR' : "";
+  for (let i = repeatNumber; i > 0; i--) {
     repetitousString += repeatWord;
   };
-  return repetitousString
+  return repetitousString;
 };
+
 
 module.exports = repeatString;
 
+
 /*
-helloWorld
-repeatString
-reverseString
-removeFromArray
-sumAll
-leapYears
-tempConversion
 
 run:
 jasmine repeatString.spec.js
+
 */
+
+// console.log('repetitousString: ', repetitousString);
+  //var repetitousString;
