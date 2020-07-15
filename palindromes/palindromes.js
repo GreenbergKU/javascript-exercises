@@ -1,6 +1,5 @@
 const palindromes = function(str) {
     const cleanStr = clean(str);
-        // console.log('str: ', str, 'cleanStr: ', cleanStr);
     for (let i = 0; i < cleanStr.length / 2; i++) {
         return cleanStr[i] !== cleanStr[cleanStr.length-1-i] ? false:true;   
     };     
@@ -8,10 +7,6 @@ const palindromes = function(str) {
 
 function clean(str) {
     const regExp = /[^A-Za-z0-9]/g;
-    // console.log(
-    //     'clean(str): ', str.toLowerCase().replace(regExp, ""), 
-    //     'str= ', str
-    // );
     return str.toLowerCase().replace(regExp, '');
 };
 
@@ -41,3 +36,15 @@ X	palindromes
 		
 	(answers = ‘solutions’ branch of repo)
 */
+
+//// REMOVED COMMENTS ////
+
+// const palindromes = function(str) {
+    // console.log('str: ', str, 'cleanStr: ', cleanStr);
+// }
+
+// clean(str) 
+    // console.log(
+    //     'clean(str): ', str.toLowerCase().replace(regExp, "", 
+    //     'str= ', str
+    // );
