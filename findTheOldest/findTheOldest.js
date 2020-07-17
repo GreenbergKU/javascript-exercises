@@ -1,6 +1,34 @@
-let findTheOldest = function() {
+const findTheOldest = function(objects) {
+	const ages = findAllAges(objects);
+	let oldestObj = null, i = 0;
+	while (!oldestObj) {
+		objects[i].age === findOldest(ages) ? oldestObj = objects[i] : i++;
+	};
+	return oldestObj;
+};
 
-}
+function findAllAges(objects) {
+	let allAges = [];
+	objects.forEach(function(object) {
+		let deathYear = object.yearOfDeath !== undefined ? object.yearOfDeath : getCurrentDate();
+		object.age = findAge(deathYear, object.yearOfBirth);
+		allAges.push(object.age);	
+	});
+	return allAges;
+};
+
+function getCurrentDate() {
+	return (new Date).getFullYear();
+};	
+
+function findAge(num1, num2) {
+	return num1 - num2;
+};
+
+function findOldest(numbers) {
+	return Math.max(...numbers);
+};
+
 
 module.exports = findTheOldest
 
@@ -27,7 +55,18 @@ X	palindromes
 X	caesar
 X	fibonacci
 X	getTheTitles
-	findTheOldest
+X	findTheOldest
 		
 	(answers = ‘solutions’ branch of repo)
+
+
+REMOVED COMMENTS:
+	// objects.forEach(function(object) {	
+		// if (object.age === findOldest(allAges)) {
+		// 		oldestObj = object;	
+		// };
+	// });
+
+	// 	console.log('object.age: ', object.age);
+	// 			console.log('oldestObj: ', oldestObj);
 */
