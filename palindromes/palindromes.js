@@ -1,7 +1,7 @@
 const palindromes = function(str) {
     const cleanStr = clean(str);
     for (let i = 0; i < cleanStr.length / 2; i++) {
-        return cleanStr[i] !== cleanStr[cleanStr.length-1-i] ? false:true;   
+        return cleanStr[i] !== cleanStr[cleanStr.length-1-i] ? false : true;   
     };     
 };
 
