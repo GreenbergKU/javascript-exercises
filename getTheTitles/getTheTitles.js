@@ -1,5 +1,9 @@
-const getTheTitles = function() {
-
+const getTheTitles = function(objects) {
+	let objectTitles = [];
+	objects.forEach(function(object) {
+		objectTitles.push(object.title);
+	});
+	return objectTitles;
 }
 
 module.exports = getTheTitles;
@@ -28,8 +32,14 @@ DIRECTIONS:
 	getTheTitles(books) 
 		//  returns ['Book','Book2']
 
-- hint:
+hint:
 	- You should use a built-in javascript method to do most of the work for you!
+
+
+REMOVED COMMENTS:
+
+	console.log('book.title: ', object.title);
+	console.log('objectTitles: ', objectTitles);
 
 
 EXERCISES:
@@ -37,7 +47,7 @@ X	calculator
 X	palindromes
 X	caesar
 X	fibonacci
-	getTheTitles
+X	getTheTitles
 	findTheOldest
 		
 	(answers = ‘solutions’ branch of repo)
