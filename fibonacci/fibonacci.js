@@ -1,18 +1,14 @@
 const fibonacci = function(n) {
 	let num = n;
 	let a = 1, b = 0, temp;
-	// let numbers = [];
-	if (n < 0) return "OOPS"
+	if (n < 0) return "OOPS";
 	while (num > 0) {
 		temp = a;
 		a = a + b;
 		b = temp; 
-		// numbers.push(b);		
 		num--;
 	};
-	// console.log(numbers, b, numbers[n-1]);
 	return b;
-
 };
 
 module.exports = fibonacci
@@ -44,7 +40,7 @@ module.exports = fibonacci
 X	calculator
 X	palindromes
 X	caesar
-	fibonacci
+X	fibonacci
 	getTheTitles
 	findTheOldest
 		
