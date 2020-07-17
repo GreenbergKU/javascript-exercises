@@ -1,5 +1,3 @@
-////// CAESAR'S ENCRYPTION //////
-
 const caesar = function(text, shift) {     
     let result = '';
 
@@ -8,7 +6,6 @@ const caesar = function(text, shift) {
         
         // get the character code of each letter
         let c = text.charCodeAt(i);
-            console.log('text[i]: ', text[i], 'c: ', c);
 
         // handle uppercase letters
         if (c >= 65 && c <= 90) {
@@ -16,43 +13,23 @@ const caesar = function(text, shift) {
             if (code < 0) {
                 code += 26;
             };
-                console.log('code: ', code);
             result += String.fromCharCode(code % 26 + 65);
-                console.log('result: ', result);
-        
+
         // handle lowercase letters
         } else if (c >= 97 && c <= 122) {
             let code = c - 97 + shift;
             if (code < 0) {
                 code += 26;
             };
-                console.log('code: ', code);
             result += String.fromCharCode(code % 26 + 97);
-                console.log('result: ', result);
         
         // its not a letter, let it through
         } else result += text.charAt(i);
-            console.log('result: ', result);
 
     };
-        console.log(result[7]);
     return result;  
 }
 
-////// DECRYPTION //////
-
-/*
-const fromCaesar = function(text, shift) {
-    decrypt(text, shift);
-}
-
-function decrypt(text,shift){
-    let result = "";
-    let deShift = (26 - shift) % 26;
-    result = caesar(text, deShift);
-    return result;
-}   
-*/
 
 module.exports = caesar
 
@@ -76,7 +53,7 @@ module.exports = caesar
 
 X	calculator
 X	palindromes
-	caesar
+X	caesar
 	fibonacci
 	getTheTitles
 	findTheOldest
@@ -90,6 +67,37 @@ X	palindromes
 /////////////////////////////////////////   
     //// REMOVED COMMENTS ////
 //////////////////////////////////////////
+// console.log's:
+    // get the character code of each letter
+        // console.log('text[i]: ', text[i], 'c: ', c);
+    // handle uppercase letters          
+        // console.log('result: ', result);
+        // console.log('code: ', code);
+    // handle lowercase letters            
+        // console.log('code: ', code);                
+        // console.log('result: ', result); 
+    // its not a letter, let it through
+        // console.log('result: ', result);
+        // console.log(result[7]);
+
+
+
+////// DECRYPTION //////
+
+/*
+const fromCaesar = function(text, shift) {
+    decrypt(text, shift);
+}
+
+function decrypt(text,shift){
+    let result = "";
+    let deShift = (26 - shift) % 26;
+    result = caesar(text, deShift);
+    return result;
+}   
+*/
+
+////// DECRYPTION //////
 
 // const caesar = function(text, shift) {
 //     //let result = '';
